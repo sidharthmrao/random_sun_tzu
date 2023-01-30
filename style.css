@@ -32,7 +32,7 @@ h2 {
     font-size: calc(100% + ((.7vw + .7vh)/2));
 }
 
-@media only screen and (max-device-width: 600px) {
+@media only screen and (max-device-width: 900px) {
     h1 {
         margin-top: 10vh;
         margin-left: 10vw;
