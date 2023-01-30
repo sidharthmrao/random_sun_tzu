@@ -41,7 +41,9 @@ h2 {
     }
     h2 {
         margin-top: 10vh;
+        margin-left: 10vw;
         margin-right: 10vw;
+        text-align: center;
         width: 80%;
     }
 }
