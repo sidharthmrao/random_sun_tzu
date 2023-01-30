@@ -1,0 +1,56 @@
+body {
+    background: black;
+    overflow: hidden;
+}
+
+h1 {
+    position: relative;
+    animation: expandText 2s;
+    width: 60%;
+    text-align: center;
+    margin-top: 40vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    justify-content: center;
+    font-weight: bold;
+    font-family: Inconsolata, serif;
+    color: white;
+    font-size: calc(100% + ((1.2vw + 1.2vh)/2));
+}
+
+h2 {
+    position: relative;
+    animation: expandText 1.5s;
+    margin-top: 10vh;
+    margin-right: 20vw;
+    width: 80%;
+    text-align: right;
+    justify-content: center;
+    font-weight: bold;
+    font-family: Inconsolata, serif;
+    color: white;
+    font-size: calc(100% + ((.7vw + .7vh)/2));
+}
+
+@media only screen and (max-width: 320px) {
+    h1 {
+        margin-top: 20vh;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        width: 80%;
+    }
+    h2 {
+        margin-top: 10vh;
+        margin-right: 10vw;
+        width: 80%;
+    }
+}
+
+@keyframes expandText {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}

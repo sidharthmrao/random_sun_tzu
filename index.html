@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Random Sun Tzu</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="icon" href="images/tzu.png">
+</head>
+<body onload="decide()" class="animate-character">
+    <h1 id="quote"></h1>
+    <h2 id="author"></h2>
+</body>
+
+<script>
+    function decide() {
+        fetch("data/all_quotes.txt")
+            .then(response => response.text())
+            .then(data => {
+                // Each line of the text file is a quote
+                let quotes = data.split("\n");
+                let quote = quotes[Math.floor(Math.random() * quotes.length)];
+                let quote_split = quote.split("|| - ");
+                document.getElementById("quote").innerText = "    " + quote_split[0];
+                document.getElementById("author").innerText = quote_split[1];
+            });
+    }
+</script>
+
+</html>
