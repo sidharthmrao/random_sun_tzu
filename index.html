@@ -18,7 +18,6 @@
         fetch("data/all_quotes.txt")
             .then(response => response.text())
             .then(data => {
-                // Each line of the text file is a quote
                 let quotes = data.split("\n");
                 let quote = quotes[Math.floor(Math.random() * quotes.length)];
                 let quote_split = quote.split("|| - ");
